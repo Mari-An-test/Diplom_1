@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="IngredientTypeTest" time="0.01" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="IngredientTypeTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="19.0.1+10-21"/>
     <property name="sun.boot.library.path" value="C:\Users\Mari\.jdks\openjdk-19.0.1\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Mari\diplom-1\diplom-1"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Mari\Diplom_Maria_Kornyakova_15\Diplom-1"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="RU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Mari\diplom-1\diplom-1"/>
+    <property name="user.dir" value="C:\Users\Mari\Diplom_Maria_Kornyakova_15\Diplom-1"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="19.0.1+10-21"/>
     <property name="os.arch" value="amd64"/>
@@ -64,6 +64,6 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="IngredientTypeTest" name="shouldReturnsCorrectEnumType[Тестовые данные: SAUCE]" time="0.009"/>
-  <testcase classname="IngredientTypeTest" name="shouldReturnsCorrectEnumType[Тестовые данные: FILLING]" time="0.001"/>
+  <testcase classname="IngredientTypeTest" name="shouldReturnsCorrectEnumType[Тестовые данные: SAUCE]" time="0"/>
+  <testcase classname="IngredientTypeTest" name="shouldReturnsCorrectEnumType[Тестовые данные: FILLING]" time="0"/>
 </testsuite>

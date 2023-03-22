@@ -1,33 +1,43 @@
-import org.junit.Before;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.junit.runners.Parameterized;
 import praktikum.Bun;
 
-import static org.junit.Assert.assertEquals;
-
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(Parameterized.class)
 public class BunTest {
-    private Bun bun;
 
-    @Before
-    public void createNewInstance() {
-        bun = new Bun("original", 200.0f);
+    private final String bunName;
+    private final float bunPrice;
+    Bun bun;
+
+    public BunTest(String bunName, float bunPrice) {
+        this.bunName = bunName;
+        this.bunPrice = bunPrice;
+        bun = new Bun(bunName, bunPrice);
+    }
+
+    @Parameterized.Parameters
+    public static Object[][] getBuns() {
+        return new Object[][]{
+                {"Вкусная", 150F},
+                {"Съедобная", Float.MAX_VALUE},
+                {"Негативная", -150F},
+                {"Бесценная", 0F},
+                {"", 150F},
+                {"        ", 150F},
+                {"№;!:/-+!@#", 150F},
+        };
     }
 
     @Test
-    public void getName() {
-        String expected = "original";
-        String actual = bun.getName();
-
-        assertEquals("Incorrect values bun name", expected, actual);
+    public void testGetName() {
+        Assert.assertEquals("Название булочки такое же, как при создании.", bunName, bun.getName());
     }
 
     @Test
-    public void getPrice() {
-        float expected = 200.0f;
-        float actual = bun.getPrice();
-
-        assertEquals("Incorrect values bun price", expected, actual, 0);
+    public void testGetPrice() {
+        Assert.assertEquals("Цена булочки совпадает до полутысячных.", bunPrice, bun.getPrice(), 0.005);
     }
+
 }
